@@ -1,15 +1,10 @@
 FROM node:18
 
-# Create app directory
 WORKDIR /app
 
-
-# Copy rest of the files
 COPY . .
-
-RUN npm install
-# Expose port
+RUN npm init -y
+RUN npm install express
 EXPOSE 3000
 
-# Start the app
 CMD ["npm", "start"]
